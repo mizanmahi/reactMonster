@@ -22,9 +22,8 @@ componentDidMount(){
   }))
 }
 
-updateSearchField(e){
-  console.log(e);
-   
+handleSearch = e => {
+  this.setState({ searchfield: e.target.value })
 }
 
   render(){
@@ -33,7 +32,7 @@ updateSearchField(e){
    return  (
       <div className="App">
         <Searchbox 
-          handleChange={(e) => this.setState({ searchfield: e.target.value })} 
+          handleChange={this.handleSearch} 
           placeholder='search monsters'
         />
        <CardList monsterList={filteredMonsters} />
