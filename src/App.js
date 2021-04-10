@@ -31,6 +31,7 @@ handleSearch = e => {
     const filteredMonsters = monsters.filter(monster => monster.name.toLowerCase().includes(searchfield.toLowerCase()))
    return  (
       <div className="App">
+        <h1 className='header-primary'>React Monsters</h1>
         <Searchbox 
           handleChange={this.handleSearch} 
           placeholder='search monsters'
